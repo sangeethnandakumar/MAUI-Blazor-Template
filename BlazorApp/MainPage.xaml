@@ -5,21 +5,10 @@
              x:Class="BlazorApp.MainPage"
              BackgroundColor="#f8fafc">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-
-        <StackLayout Grid.Row="0" BackgroundColor="#003468">
-            <Label Text="Test App" TextColor="White" FontSize="Title" FontAttributes="Bold" Padding="16"/>
-        </StackLayout>
-
-        <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html" Grid.Row="1">
-            <BlazorWebView.RootComponents>
-                <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
-            </BlazorWebView.RootComponents>
-        </BlazorWebView>
-    </Grid>
+    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html" Grid.Row="1">
+        <BlazorWebView.RootComponents>
+            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
 
 </ContentPage>
