@@ -5,10 +5,27 @@
              x:Class="BlazorApp.MainPage"
              BackgroundColor="#f8fafc">
 
-    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html" Grid.Row="1">
-        <BlazorWebView.RootComponents>
-            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
-        </BlazorWebView.RootComponents>
-    </BlazorWebView>
 
+    <StackLayout>
+
+        <StackLayout BackgroundColor="#003468">
+            <Label FontSize="22" Margin="16,32,16,16" Text="GrandSe POS Systems" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="Start">
+            <Label FontSize="12" Margin="16,16,0,0" Text="FirstName"  TextColor="Black" FontAttributes="Bold" />
+            <Label FontSize="12" Margin="16,16,0,0" Text="LastName" TextColor="Black" FontAttributes="Bold" />
+            <Label FontSize="12" Margin="16,16,0,0" Text="Address" TextColor="Black" FontAttributes="Bold" />
+        </StackLayout>
+
+        <Label FontSize="32" Margin="0,20,0,0" Text="GrandSe POS" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontFamily="Arial"/>
+        <Label FontSize="12" Margin="0,0,0,0" Text="GrandSe Systems Private Limited" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" />
+
+        <StackLayout Margin="10,16,0,0" Orientation="Vertical" HorizontalOptions="Center">
+            <Button Text="Send A Request" CornerRadius="8" Background="#003468" />
+        </StackLayout>
+
+
+    </StackLayout>
+    
 </ContentPage>

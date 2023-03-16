@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-        blazorWebView.BlazorWebViewInitialized += BlazorWebView_BlazorWebViewInitialized;
+        //blazorWebView.BlazorWebViewInitialized += BlazorWebView_BlazorWebViewInitialized;
     }
 
     private void BlazorWebView_BlazorWebViewInitialized(object sender, BlazorWebViewInitializedEventArgs e) {
