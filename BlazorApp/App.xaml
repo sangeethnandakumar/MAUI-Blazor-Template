@@ -22,7 +22,7 @@
             </Style>
 
             <Style TargetType="BlazorWebView">
-                <Setter Property="Background" Value="white" />
+                <Setter Property="Background" Value="#003468" />
             </Style>
 
         </ResourceDictionary>

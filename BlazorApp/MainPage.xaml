@@ -1,14 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:BlazorApp"
+             xmlns:local="clr-namespace:BlazorApp;assembly=BlazorApp"
              x:Class="BlazorApp.MainPage"
              BackgroundColor="#f8fafc">
 
-    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html" Grid.Row="1">
-        <BlazorWebView.RootComponents>
-            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
-        </BlazorWebView.RootComponents>
-    </BlazorWebView>
+    <StackLayout>
+
+        <StackLayout BackgroundColor="#003468">
+            <Label FontSize="22" Margin="16,32,16,16" Text="GrandMaster Quiz" HorizontalOptions="Start" TextColor="White" FontAttributes="Bold" />
+        </StackLayout>
+
+        <StackLayout Margin="16,300,16,16" Orientation="Vertical" HorizontalOptions="Center">
+            <ProgressBar Progress="{Binding AnotherSample.Test}" />
+            <Label FontSize="42" Margin="16,32,16,16" Text="{Binding QuestionNumber}" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" />
+            <Label FontSize="22" Margin="16,0,16,16" Text="What is the capital city of the United States of America?" HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <Grid HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Clicked="Button_Clicked" FontSize="18" Grid.Row="0" Grid.Column="0" Margin="16" Text="Washington DC" CornerRadius="8" Background="#003468" />
+            <Button FontSize="18" Grid.Row="0" Grid.Column="1" Margin="16" Text="Ohio" CornerRadius="8" Background="#003468" />
+            <Button FontSize="18" Grid.Row="1" Grid.Column="0" Margin="16" Text="Las Vegas" CornerRadius="8" Background="#003468" />
+            <Button FontSize="18" Grid.Row="1" Grid.Column="1" Margin="16" Text="South Hampiere" CornerRadius="8" Background="#003468" />
+        </Grid>
+
+    </StackLayout>
 
 </ContentPage>
