@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace BlazorApp;
 
-public partial class MainPage : ContentPage, INotifyPropertyChanged {
+public partial class MainPage : ContentPage {
 
     public ViewModel MyView { get; set; } = new ViewModel();
 
